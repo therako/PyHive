@@ -35,7 +35,7 @@ class HiveStringTypeBase(types.TypeDecorator):
     impl = types.String
 
     def process_bind_param(self, value, dialect):
-        raise NotImplementedError("Writing to Hive not supported")
+        return value
 
 
 class HiveDate(HiveStringTypeBase):
